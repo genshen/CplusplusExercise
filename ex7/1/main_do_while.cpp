@@ -1,11 +1,15 @@
+//
+// Created by gensh on 2016/12/16.
+//
+
 //use do-while statement to calculate the sum of all odd from 1 to 100
 #include <iostream>
+
 using namespace std;
-int main()
-{
+
+int main() {
     int i = 1, sum = 0; //some bad ideas:i or sum did'n initialize
-    do
-    {
+    do {
         sum += i;
     } while ((i += 2) < 100);
 
