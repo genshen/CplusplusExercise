@@ -34,13 +34,13 @@
     1357
     13579
 
-    A
-    BBB
-    CCCCC
+       A
+      BBB
+     CCCCC
     DDDDDDD
-    CCCCC
-    BBB
-    A
+     CCCCC
+      BBB
+       A
     ```
 
 5. 编写一个程序，统计输出各位数之和为9，且能被5整除的五位数的个数。
