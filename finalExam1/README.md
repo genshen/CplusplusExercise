@@ -1,4 +1,4 @@
-# Answer for C Plus Plus Final Examination
+# Answers for C Plus Plus Final Examination
 ## 选择题
 1. D
 2. D
@@ -16,9 +16,9 @@
 ## 读程序写结果  
 "︺"表示空格;"↲"表示回车换行  
 
-1. Question 1
- more [details](1.c)   
- Answer:  
+1. Question 1  
+ more [details](1.c)  
+ Answer:  
  ```
 6,8↲
 5,10↲
