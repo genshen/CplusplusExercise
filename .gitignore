@@ -31,3 +31,6 @@
 #Documents
 *.doc
 *.docx
+.idea/
+.vscode/
+cmake-build-debug/
