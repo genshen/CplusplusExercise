@@ -19,25 +19,28 @@
 1. Question 1
  more [details](1.c)   
  Answer:  
-```
+ ```
 6,8↲
 5,10↲
-```
+ ```
+ 
 2. Question 2  
  more [details](2.c)  
- Answer:
+ Answer:  
  ```
 4↲
  ```
+ 
 3. Question 3  
  more [details](3.c)  
- Answer:
+ Answer:  
  ```
 60↲
  ```
+ 
 4. Question 4  
  more [details](4.c)  
- Answer:
+ Answer:  
  ```
 ︺︺%︺︺$︺︺$︺︺$︺︺$↲
 ︺︺0︺︺%︺︺$︺︺$︺︺$↲
@@ -47,8 +50,10 @@
  ```
 
 ## 程序选择填空题
-1. DCA  more [details](d1.c)  
-2. ABD  more [details](d2.c)  
+1. DCA.  
+ more [details](d1.c)  
+2. ABD.  
+ more [details](d2.c)  
 
 ## 程序填题
 1. checkout code [Here](e1.c).
