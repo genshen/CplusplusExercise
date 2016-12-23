@@ -19,6 +19,6 @@ void main()
 	}
 	scanf("%d", &score);
     }
-    aver = sum / m;
+    aver = (sum + .0) / m;
     printf("%d,%d,%d,%.2f\n", m, maxs, mins, aver);
 }
