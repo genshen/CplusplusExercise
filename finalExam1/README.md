@@ -9,7 +9,7 @@
 7. B
 8. D
 9. B
-10. A
+10. B
 11. A
 12. false  (c++) OR 0 (Clang)   
 
