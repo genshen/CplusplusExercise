@@ -160,8 +160,8 @@ D. 对象之间的信息传递是通过消息进行的
 20. 有函数max声明如下：int max(int t , int d); ，试定义并初始化一个指向该函数的函数指针:_________。
 
 ### 三、改错题(本大题共5小题，每小题2分，共10分)下面的类定义中有一处错误，请用下横线标出错误所在行并给出修改意见。
-1. 找出下面程序的错误并改正:
-  ```c
+1. 找出下面程序的错误并改正:  
+ ```c
 #include <iostream>
 class Test
 {
@@ -179,10 +179,10 @@ int main()
     cout<<mt.gety()<<endl;
 return 0;
 }
-  ```
+ ```
 
 2. 找出下面程序的错误并改正:
-  ```c
+ ```c
 #include <iostream>
 class Test{
     int x,y;
@@ -205,10 +205,10 @@ int main(){
     a.show();
 return 0;
 }
-  ```
+ ```
 
 3. 找出下面程序的错误并改正:
-  ```c 
+ ```c 
 #include <iostream>
 using namespace std;
 
@@ -226,10 +226,10 @@ int main() {
         cout<<p[i]<<" "; //output:0 1 2 3 4 5 6 7 8 9 10
     }
 }
-  ```
+ ```
 
 4. 找出下面程序的错误并改正:
-  ```c
+ ```c
 #include <iostream>
 class X{
 public:
@@ -251,10 +251,10 @@ int main(){
     fun(X(10));
     return 0;
 }
-  ```
+ ```
 
 5. 找出下面程序的错误并改正:
-  ```c
+ ```c
 #include <iostream>
 #include <string.h>
 class Bas{
@@ -276,11 +276,11 @@ int main(){
     show();
     return 0;
 }
-  ```
+ ```
 
 ### 四、完成程序题(本大题共5小题，每小题4分，共20分)
 1. 在下面程序横线处填上适当字句，以使该程序执行结果正确：  
-  ```c
+ ```c
 #include <iostream>
 using namespace std;
 
@@ -305,10 +305,10 @@ int main() {
     }
     return 0;
 }
-  ```  
+ ```  
 
 2. 在下面程序的底画线处填上适当的字句，使该程序执行结果为40。
-  ```c
+ ```c
 #include <iostream>
 class Test{ 
 public:
@@ -327,10 +327,10 @@ int main(){
     cout<<test.Getnum()<<endl;
 return 0;
 }
-  ```  
+ ```  
 
 3. 在下列程序的空格处填上适当的字句，使输出为：0，2，10。
-  ```c
+ ```c
 #include <iostream>
 #include <cmath>
 class Magic{
@@ -353,10 +353,10 @@ int main(){
     Magic(-8)<<endl;
 return 0;
 }
-  ```   
+ ```   
 
 4. 下面是一个输入半径，输出其面积和周长的C++程序，在下划线处填上正确的语句。
-  ```c
+ ```c
 #include <iostream>
 _________;
 _________;
@@ -370,25 +370,25 @@ int main(){
     cout<<"The area is："<<s<<endl;
 return 0;
 }
-  ```
+ ```
 
 5. 程序实现大写字母转换成小写字母。
-  ```c
+ ```c
 #include <iostream>
 int main(){
-char a;
-_______;
-cin>>a;
-if(_______)
-a=a+i;
-cout<<a<<endl;
+    char a;
+    _______;
+    cin>>a;
+    if(_______)
+    a=a+i;
+    cout<<a<<endl;
 return 0;
 }
-  ```  
+ ```  
 
 ### 五、程序分析题(本大题共4小题，每小题5分，共20分)
 1. 给出下面程序输出结果。
-  ```c
+ ```c
 #include <iostream>
 using namespace std;
 
@@ -415,10 +415,10 @@ int main() {
     index = search(data, 9, 0, 16);
     cout << index<<endl;
 }
-  ```  
+ ```  
 
 2. 给出下面程序输出结果。
-  ```c
+ ```c
 #include <cmath>
 #include <iostream>
 #include <iomanip>
@@ -443,10 +443,10 @@ bool fun(long n) {
             return false;
     return true;
 }
-  ```  
+ ```  
 
 3. 给出下面程序输出结果。
-  ```c
+ ```c
 #include <iostream>
 class Test {
     int x, y;
@@ -467,10 +467,10 @@ int main() {
     cout << (p1->*p)(7, 20) << endl;
 return 0;
 }
-  ```  
+ ```  
 
 4. 给出下面程序输出结果。
-  ```c
+ ```c
 #include <cstring>
 #include <iomanip>
 #include <iostream>
@@ -526,21 +526,21 @@ int main() {
     }
     return 0;
 }
-  ```  
+ ```  
 
 ### 六、程序设计题(本大题每小题10分，选一题完成即可，总分10分)
 1. 已定义一个Shape抽象类，在此基础上派生出矩形Rectangle和圆形Circle类，二者都有GetPerim（）函数计算对象的周长，并编写测试main（）函数。
-  ```c
+ ```c
 class Shape {
 public:
     Shape() {}
     ~Shape() {}
     virtual float GetPerim()=0;
 }
-  ```  
+ ```  
 
 2. 在下面模板的基础上，编写四个函数，分别完成两个int值的加、减、乘、除运算，并在主函数编写测试：通过调用getFunctionByType函数分别得到指向这四个函数的函数指针，再通过函数指针分别调用这四个函数。
-  ```c
+ ```c
 //加法函数如下,自己补充完成减法、乘法、除法函数
 int add(int a,int b){
     return a+b;
@@ -560,4 +560,4 @@ ______ getFunctionByType(int type){
             default return add; //默认返回加法函数的函数指针
     }
 }
-  ```   
+ ```   
