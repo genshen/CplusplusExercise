@@ -141,7 +141,7 @@ D. 对象之间的信息传递是通过消息进行的
 11. 下列程序段的输出结果是___。  
     for(i=0,j=10,k=0;i<=j;i++,j-=3,k=i+j);cout<<k;
 12. String 类的___方法返回查找到的字符串在主串的位置。
-13. 下面代码中while循环执行次数是___。
+13. 下面代码中while循环执行次数是___。  
     ```c
     int n=0;
     while(n=1)n++;
@@ -160,7 +160,7 @@ D. 对象之间的信息传递是通过消息进行的
 20. 有函数max声明如下：int max(int t , int d); ，试定义并初始化一个指向该函数的函数指针:_________。
 
 ### 三、改错题(本大题共5小题，每小题2分，共10分)下面的类定义中有一处错误，请用下横线标出错误所在行并给出修改意见。
-1. 
+1. 找出下面程序的错误并改正:
   ```c
 #include <iostream>
 class Test
@@ -181,7 +181,7 @@ return 0;
 }
   ```
 
-2.  
+2. 找出下面程序的错误并改正:
   ```c
 #include <iostream>
 class Test{
@@ -207,7 +207,7 @@ return 0;
 }
   ```
 
-3. 
+3. 找出下面程序的错误并改正:
   ```c 
 #include <iostream>
 using namespace std;
@@ -227,7 +227,8 @@ int main() {
     }
 }
   ```
-4.  
+
+4. 找出下面程序的错误并改正:
   ```c
 #include <iostream>
 class X{
@@ -252,7 +253,7 @@ int main(){
 }
   ```
 
-5.  
+5. 找出下面程序的错误并改正:
   ```c
 #include <iostream>
 #include <string.h>
