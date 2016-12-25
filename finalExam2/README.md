@@ -158,3 +158,405 @@ D. 对象之间的信息传递是通过消息进行的
 18. 在面向对象的程序设计中，将一组对象的共同特性抽象出来形成___。
 19. 定义类动态对象数组时，元素只能靠自动调用该类的___来进行初始化。
 20. 有函数max声明如下：int max(int t , int d); ，试定义并初始化一个指向该函数的函数指针:_________。
+
+### 三、改错题(本大题共5小题，每小题2分，共10分)下面的类定义中有一处错误，请用下横线标出错误所在行并给出修改意见。
+1. 
+  ```c
+#include <iostream>
+class Test
+{
+private:
+    int x,y=20;
+public:
+    Test(int i,int j){x=i,y=j;}
+    int getx(){return x;}
+    int gety(){return y;}
+};
+int main()
+{
+    Test mt(10,20);
+    cout<<mt.getx()<<endl;
+    cout<<mt.gety()<<endl;
+return 0;
+}
+  ```
+
+2.  
+  ```c
+#include <iostream>
+class Test{
+    int x,y;
+public:
+    fun(int i,int j){
+        x=i;y=j;
+    }
+    show(){
+        cout<<"x="<<x;
+        if(y)
+        cout<<",y="<<y<<endl;
+        cout<<endl;
+    }
+};
+int main(){
+    Test a;
+    a.fun(1);
+    a.show();
+    a.fun(2,4);
+    a.show();
+return 0;
+}
+  ```
+
+3. 
+  ```c 
+#include <iostream>
+using namespace std;
+
+void malloc(int *p, int length) {
+    p= new int[length];
+    for (int i = 0; i < length; i++) {
+        p[i] = i;
+    }
+}
+
+int main() {
+    int *p;
+    malloc(p, 10);
+    for(int i=0;i<10;i++){
+        cout<<p[i]<<" "; //output:0 1 2 3 4 5 6 7 8 9 10
+    }
+}
+  ```
+4.  
+  ```c
+#include <iostream>
+class X{
+public:
+    int x;
+public:
+    X(int x){
+        cout<<this->x=x<<endl;
+    }
+    X(X &t){
+        x=t.x;
+        cout<<t.x<<endl;
+    }
+    void fun(X);
+};
+void fun(X t){
+    cout<<t.x<<endl;
+}
+int main(){
+    fun(X(10));
+    return 0;
+}
+  ```
+
+5.  
+  ```c
+#include <iostream>
+#include <string.h>
+class Bas{
+public:
+    Bas(char *s="＼0"){
+        strcpy(name,s);
+    }
+    void show();
+protected:
+    char name［20］;
+};
+
+Bas b;
+void show(){
+    cout<<"name:"<<b.name<<endl;
+}
+int main(){
+    Bas d2("hello");
+    show();
+    return 0;
+}
+  ```
+
+### 四、完成程序题(本大题共5小题，每小题4分，共20分)
+1. 在下面程序横线处填上适当字句，以使该程序执行结果正确：  
+  ```c
+#include <iostream>
+using namespace std;
+
+int main() {
+    //功能:统计输入英文字母的个数
+    int Char[26*2] = {0};
+    char ch;
+    while(cin.get(ch)){
+        //Ascii表:A:65,B:66,...,Z:90.  a:97,b:98,...,z:122
+        if(ch>=65 && ch <=90){
+            Char[ch-65]++;
+        } else if(ch>=97 && ch<=122){
+            _______________________;
+        }else{
+            break;
+        }
+    }
+
+    //输出统计的各个字母的频率
+    for(int i =0;i<26*2;i++){
+        cout<<(char)((i+65)>=91?i+65+6:i+65)<<"Count:"<<Char[i]<<endl;
+    }
+    return 0;
+}
+  ```  
+
+2. 在下面程序的底画线处填上适当的字句，使该程序执行结果为40。
+  ```c
+#include <iostream>
+class Test{ 
+public:
+    ______;
+    Test (int i=0){
+        x=i+x;
+    }
+
+    int Getnum(){
+        return Test::x+7;
+    }
+};
+_______;
+int main(){
+    Test test;
+    cout<<test.Getnum()<<endl;
+return 0;
+}
+  ```  
+
+3. 在下列程序的空格处填上适当的字句，使输出为：0，2，10。
+  ```c
+#include <iostream>
+#include <cmath>
+class Magic{
+    double x;
+public:
+    Magic(double d=0.00):x(fabs(d))
+    {}
+    Magic operator+(______)
+    {
+    return Magic(sqrt(x*x+c.x*c.x));
+    }
+    _______operator<<(ostream & stream,Magic & c)
+    { stream<<c.x;
+    return stream;
+    }
+};
+int main(){
+    Magic ma;
+    cout<<ma<<", "<<Magic(2)<<", "<<ma+Magic(-6)+
+    Magic(-8)<<endl;
+return 0;
+}
+  ```   
+
+4. 下面是一个输入半径，输出其面积和周长的C++程序，在下划线处填上正确的语句。
+  ```c
+#include <iostream>
+_________;
+_________;
+int main(){
+    double rad;
+    cout<<"rad=";
+    cin>>rad;
+    double l=2.0*pi*rad;
+    double s=pi*rad*rad;
+    cout<<"＼n The long is："<<l<<endl;
+    cout<<"The area is："<<s<<endl;
+return 0;
+}
+  ```
+
+5. 程序实现大写字母转换成小写字母。
+  ```c
+#include <iostream>
+int main(){
+char a;
+_______;
+cin>>a;
+if(_______)
+a=a+i;
+cout<<a<<endl;
+return 0;
+}
+  ```  
+
+### 五、程序分析题(本大题共4小题，每小题5分，共20分)
+1. 给出下面程序输出结果。
+  ```c
+#include <iostream>
+using namespace std;
+
+int search(int *data, int target, int left, int right) {
+    int mid = (left + right) / 2;
+    while (left < right) {
+        if (data[mid] == target) {
+            return mid;
+        }
+        if (target > data[mid]) {
+            left = mid+1;
+        } else {
+            right = mid-1;
+        }
+        mid = (left + right) / 2;
+    }
+    return -1;
+}
+
+int main() {
+    int data[16] = {-4, -2, 0, 1, 3, 6, 8, 10, 10, 10, 20, 23, 25, 35, 100};
+    int index = search(data, 10, 0, 16);
+    cout << index<<endl;
+    index = search(data, 9, 0, 16);
+    cout << index<<endl;
+}
+  ```  
+
+2. 给出下面程序输出结果。
+  ```c
+#include <cmath>
+#include <iostream>
+#include <iomanip>
+bool fun(long n);
+
+int  main() {
+    long a = 10, b = 30, l = 0;
+    if (a % 2 == 0) a++;
+    for (long m = a; m <= b; m += 2)
+        if (fun(m)) {
+            if (l++ % 10 == 0)
+                cout << endl;
+            cout << setw(5) << m;
+        }
+return 0;
+}
+
+bool fun(long n) {
+    int sqrtm = (int) sqrt(n);
+    for (int i = 2; i <= sqrtm; i++)
+        if (n % i == 0)
+            return false;
+    return true;
+}
+  ```  
+
+3. 给出下面程序输出结果。
+  ```c
+#include <iostream>
+class Test {
+    int x, y;
+public:
+    Test(int i, int j = 0) {
+        x = i;
+        y = j;
+    }
+    int get(int i, int j) { return i + j; }
+};
+
+int main() {
+    Test t1(2), t2(4, 6);
+    int (Test::*p)(int, int= 10);
+    p = Test::get;
+    cout << (t1.*p)(5) << endl;
+    Test *p1 = &t2;
+    cout << (p1->*p)(7, 20) << endl;
+return 0;
+}
+  ```  
+
+4. 给出下面程序输出结果。
+  ```c
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+class student {
+    char name[8];
+    int deg;
+    char level[7];
+    friend class process; // 声明友元类
+
+public:
+    student(char na[], int d) {
+        strcpy(name, na);
+        deg = d;
+    }
+};
+
+class process {
+public:
+
+    void trans(student &s) {
+        int i = s.deg / 10;
+        switch (i) {
+            case 9:
+                strcpy(s.level, "优");
+                break;
+            case 8:
+                strcpy(s.level, "良");
+                break;
+            case 7:
+               strcpy(s.level, "中");
+                break;
+            case 6:
+                strcpy(s.level, "及格");
+                break;
+            default:
+                strcpy(s.level, "不及格");
+        }
+    }
+
+    void show(student &s) { cout << setw(10) << s.name << setw(4) << s.deg << setw(8) << s.level << endl; }
+};
+
+int main() {
+    student st[] = {student("张三", 78), student("李四", 92), student("王五", 62), student("孙六", 88)};
+    process p;
+    cout << "结 果:" << "姓名" << setw(6) << "成绩" << setw(8) << "等级" << endl;
+
+    for (int i = 0; i < 4; i++) {
+        p.trans(st[i]);
+        p.show(st[i]);
+    }
+    return 0;
+}
+  ```  
+
+### 六、程序设计题(本大题每小题10分，选一题完成即可，总分10分)
+1. 已定义一个Shape抽象类，在此基础上派生出矩形Rectangle和圆形Circle类，二者都有GetPerim（）函数计算对象的周长，并编写测试main（）函数。
+  ```c
+class Shape {
+public:
+    Shape() {}
+    ~Shape() {}
+    virtual float GetPerim()=0;
+}
+  ```  
+
+2. 在下面模板的基础上，编写四个函数，分别完成两个int值的加、减、乘、除运算，并在主函数编写测试：通过调用getFunctionByType函数分别得到指向这四个函数的函数指针，再通过函数指针分别调用这四个函数。
+  ```c
+//加法函数如下,自己补充完成减法、乘法、除法函数
+int add(int a,int b){
+    return a+b;
+}
+
+//该函数的参数是int,返回值是一个 int (int,int)类型的函数指针
+______ getFunctionByType(int type){
+    switch (type){
+        case 0:
+            return add;
+        case 1:
+            _________ //返回减法函数的函数指针
+        case 3:
+            _________ //返回乘法函数的函数指针
+        case 4:
+            _________ //返回除法函数的函数指针
+            default return add; //默认返回加法函数的函数指针
+    }
+}
+  ```   
