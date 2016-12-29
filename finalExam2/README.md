@@ -207,7 +207,7 @@ D. 对象之间的信息传递是通过消息进行的
  }
   ```
 
- 3. 找出下面程序的错误并改正:
+3. 找出下面程序的错误并改正:
   ```c 
  #include <iostream>
  using namespace std;
